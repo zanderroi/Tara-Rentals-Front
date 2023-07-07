@@ -3,7 +3,9 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import CustomerHome from "../views/customer/CustomerHome.vue";
 import LandingPage from "../views/LandingPage.vue";
 import CustomerLogin from "@/views/customer/LoginView.vue";
-import CustomerRegister from "@/views/customer/RegisterView.vue";
+import CustomerRegister from "@/views/Auth/CustomerRegister.vue";
+import OwnerRegister from "@/views/Auth/OwnerRegister.vue";
+import TruckerRegister from "@/views/Auth/TruckerRegister.vue";
 import UserLogin from "@/views/Auth/LoginPage.vue";
 
 const routes = [
@@ -24,7 +26,7 @@ const routes = [
     component: CustomerLogin,
   },
   {
-    path:"/customer/Register",
+    path:"/Auth/CustomerRegister",
     name: "CustomerRegister",
     component: CustomerRegister,
   },
@@ -33,6 +35,16 @@ const routes = [
     name: "UserLogin",
     component: UserLogin,
   },
+  {
+    path:"/Auth/OwnerRegister",
+    name:"OwnerRegister",
+    component: OwnerRegister,
+  },
+  {
+    path:"/Auth/TruckerRegister",
+    name:"TruckerRegister",
+    component: TruckerRegister,
+  }
 ];
 
 const router = createRouter({

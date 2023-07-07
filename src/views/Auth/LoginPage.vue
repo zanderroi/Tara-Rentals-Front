@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="font-montserrat">
     <div class="flex flex-row justify-center" style="min-height: 100vh;">
 
         <div class="w-1/2 bg-cover" :style="`background-image: url(${require('@/assets/loginbg.png')});`">
@@ -10,9 +10,9 @@
         <div class="w-1/2 text-center justify-center flex items-center h-screen" style="background-color: #C0BDBD; ">
             <div class="h-96 mx-auto text-center justify-center items-center" style="background-color: #232628; width: 500px;">
                 <div class="flex flex-row justify-center items-center pt-6 space-x-4">
-                    <a href=""><div class="border-b-4 w-32" style="border-color: #FFB128 ;"><h3 class="font-semibold text-center" style="color:#FFB128; ">Customer</h3> </div></a>
-                    <a href=""><div class="border-b-4 w-32" style="border-color: #AAAAAA ;"><h3 class="font-semibold text-center" style="color:white; ">Car Owner</h3> </div></a>
-                    <a href=""><div class="border-b-4 w-32" style="border-color: #AAAAAA ;"><h3 class="font-semibold text-center" style="color:white; ">Trucker</h3> </div></a>
+                    <a href=""><div class="border-b-4 w-32" style="border-color: #FFB128 ;"><h3 class="font-semibold text-center text-sm" style="color:#FFB128; ">Customer</h3> </div></a>
+                    <a href=""><div class="border-b-4 w-32" style="border-color: #AAAAAA ;"><h3 class="font-semibold text-center text-sm" style="color:white; ">Car Owner</h3> </div></a>
+                    <a href=""><div class="border-b-4 w-32" style="border-color: #AAAAAA ;"><h3 class="font-semibold text-center text-sm" style="color:white; ">Trucker</h3> </div></a>
                 </div>
             <h1 class="text-lg font-semibold text-white p-2 mt-4">LOG IN TO YOUR ACCOUNT</h1>
             <input type="email" id="email" class=" p-2 mt-2 text-gray-800 placeholder-gray-900 border border-gray-700 w-3/4 text-sm h-10" style="background-color: #C0BDBD;" placeholder="Email" required>
@@ -39,3 +39,10 @@
     </div>
     </div>
 </template>
+
+<style>
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+</style>

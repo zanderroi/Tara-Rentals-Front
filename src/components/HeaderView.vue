@@ -1,18 +1,18 @@
 <template>
      <div id="app">
     <nav class="topheader sticky top-0 left-0 right-0 font-montserrat">
-        <div class="flex flex-row justify-center items-center text-gray-300 text-sm p-4 space-x-6">
+        <div class="flex flex-row justify-center items-center text-gray-300 text-sm p-2 space-x-6">
           <a href="/">
             <div><img src="../assets/taralogo.png" class="rounded-full w-8 h-8"></div></a>
             <a href="/" class="mr-4 pr-4 hover:text-yellow-400">TARA</a>
 
-    <div>
+    <div class="text-xs">
       <i class="fa-solid fa-phone-flip" style="color: #ffffff;"></i> +1 212-226-3126
     </div>
-    <div>
+    <div class="text-xs">
       <i class="fa-sharp fa-solid fa-location-pin" style="color: #ffffff;"></i> 1840 E Garvey Ave South West Covina, CA 91791
     </div>
-    <div class="mr-4">
+    <div class="mr-4 text-xs">
       <i class="fa-solid fa-calendar-check" style="color: #ffffff;"></i> Work Hours
     </div>
     <a href="#" class="ml-6 pl-4">

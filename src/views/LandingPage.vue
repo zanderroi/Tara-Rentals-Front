@@ -48,8 +48,8 @@
  
     </div>
   </div>
-  <div class="bg-white" :style="`min-height: 100vh;`">
-  <div class="pt-4 flex flex-row justify-center p-4 mt-4 space-x-5">
+  <div class="mt-6 p-6 bg-white" :style="`min-height: 100vh;`">
+  <div class="pt-4 flex flex-row justify-center space-x-5">
     <div>
       <h1 class="font-montserrat text-gray-800 font-bold text-4xl">RECENT</h1>
     </div>
@@ -57,35 +57,133 @@
       <h1 class="font-montserrat font-bold text-4xl" style="color: #FFB128;">CARS AVAILABLE</h1>
     </div>
   </div>
-  <p class="text-center text-md font-normal">Select the one that suits your preference</p>
+  <p class="mt-4 text-center text-md font-normal mb-10">Select the one that suits your preference</p>
+  <div class="flex flex-wrap justify-center items-center space-x-5 space-y-4 px-8">
+    <div class="w-64 h-72 mt-4" style="background-color: #373C3F;">
+          <div class="h-48 bg-cover border-b-4" :style="`background-image: url(${require('@/assets/carsimage/toyota3.jpg')}); border-color: #4971F1;`"></div>
+        </div>
+        <div class="w-64 h-72" style="background-color: #373C3F;">
+          <div class="h-48 bg-cover border-b-4" :style="`background-image: url(${require('@/assets/carsimage/toyota3.jpg')}); border-color: #4971F1;`"></div>
+        </div>
+        <div class="w-64 h-72" style="background-color: #373C3F;">
+          <div class="h-48 bg-cover border-b-4" :style="`background-image: url(${require('@/assets/carsimage/toyota3.jpg')}); border-color: #4971F1;`"></div>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center items-center space-x-5 space-y-4 px-8">
+        <div class="w-64 h-72 mt-4" style="background-color: #373C3F;">
+          <div class="h-48 bg-cover border-b-4" :style="`background-image: url(${require('@/assets/carsimage/toyota3.jpg')}); border-color: #4971F1;`"></div>
+        </div>
+        <div class="w-64 h-72" style="background-color: #373C3F;">
+          <div class="h-48 bg-cover border-b-4" :style="`background-image: url(${require('@/assets/carsimage/toyota3.jpg')}); border-color: #4971F1;`"></div>
+        </div>
+        <div class="w-64 h-72" style="background-color: #373C3F;">
+          <div class="h-48 bg-cover border-b-4" :style="`background-image: url(${require('@/assets/carsimage/toyota3.jpg')}); border-color: #4971F1;`"></div>
+        </div>
+      </div>
+  
 </div>
-    <div class="pt-4 mt-6">
-      <div class="flex flex-wrap justify-center items-center space-x-3 space-y-2">
-        <div class=" w-64 h-72  shadow-md" style="background-color: #373C3F;">
-        <div class="h-48 bg-cover" :style="`background-image: url(${require('@/assets/carsimage/toyota3.jpg')});`">
+ 
+      
+
+    <div class="bg-cover w-full" :style="`background-image: url(${require('@/assets/bg3.png')}); min-height: 24rem;`">
+  <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-32 pt-10 sm:flex">
+    <div class="bg-white w-full sm:w-96 h-64 p-6 rounded-sm shadow-sm">
+      <img class="mt-4 w-14 h-10" src="../assets/caricon.png">
+      <h3 class="font-montserrat text-md font-bold text-left mt-2">LOOKING FOR A CAR TO RENT?</h3>
+      <p class="text-left text-sm mt-4 font-montserrat">Our cars are delivered fully-registered with all requirements completed.</p>
+      <button class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-sm text-white flex justify-start mt-4 text-xs font-montserrat">VIEW CARS</button>
+    </div>
+    <div class="bg-white w-full sm:w-96 h-64 p-6 rounded-sm shadow-sm">
+      <img class="mt-4 w-14 h-10" src="../assets/caricon.png">
+      <h3 class="font-montserrat text-md font-bold text-left mt-2">LOOKING FOR A TRUCKING SERVICE?</h3>
+      <p class="text-left text-sm mt-4 font-montserrat">Our cars are delivered fully-registered with all requirements completed.</p>
+      <button class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-sm text-white flex justify-start mt-4 text-xs font-montserrat">VIEW TRUCKS</button>
+    </div>
+  </div>
+</div>
+
+    <div class="w-full h-72 flex flex-row justify-center items-center space-x-6" style="background-color: #C0BDBD;">
+
+      <div class="border-2 border-white w-72 rounded-sm flex flex-row" style="min-height: 10rem;">
+
+        <div class="ml-6 mt-6 w-24">
+          <img class="mt-4 w-8 h-8" src="../assets/icons/brands.png">
         </div>
+        <div class="p-4 mt-6">
+          <h3 class="font-montserrat font-bold text-xs text-left"> WIDE RANGE OF BRANDS</h3>
+          <p class="text-xs text-left font-montserrat mt-2">With a robust selection of
+          popular vehicles on hand, as
+          well as leading vehicles from
+          BMW.</p>
         </div>
-        <div class="w-64 h-72" style="background-color: #373C3F;">
-          <div class="h-48 bg-cover" :style="`background-image: url(${require('@/assets/carsimage/samplecar.png')});`">
-        </div>
+
+
       </div>
-        <div class="w-64 h-72" style="background-color: #373C3F;">
-          <div class="h-48 bg-cover" :style="`background-image: url(${require('@/assets/carsimage/samplecar.png')});`">
-        </div>
-        </div>
-        <div class="w-64 h-72" style="background-color: #373C3F;">
-          <div class="h-48 bg-cover" :style="`background-image: url(${require('@/assets/carsimage/samplecar.png')});`">
-        </div>
-        </div>
-        <div class="w-64 h-72" style="background-color: #373C3F;">
-          <div class="h-48 bg-cover" :style="`background-image: url(${require('@/assets/carsimage/samplecar.png')});`">
-        </div>
-        </div>
-        <div class="w-64 h-72" style="background-color: #373C3F;">
-          <div class="h-48 bg-cover" :style="`background-image: url(${require('@/assets/carsimage/samplecar.png')});`">
-        </div>
-        </div>
+      <div class="border-2 border-white w-72 rounded-sm flex flex-row" style="min-height: 10rem;">
+
+      <div class="ml-6 mt-6 w-32">
+        <img class="mt-4 w-10 h-8" src="../assets/icons/trust.png">
       </div>
+      <div class="p-4 mt-6">
+        <h3 class="font-montserrat font-bold text-xs text-left"> TRUSTED BY THOUSANDS</h3>
+        <p class="text-xs text-left font-montserrat mt-2">10 new offers every day. 350
+        offers on site, trusted by a
+        community of thousands of
+        users.</p>
+      </div>
+
+
+      </div>
+      <div class="border-2 border-white w-72 rounded-sm flex flex-row" style="min-height: 10rem;">
+
+      <div class="ml-6 mt-6 w-32">
+        <img class="mt-4 w-7 h-8" src="../assets/icons/service.png">
+      </div>
+      <div class="p-4 mt-6">
+        <h3 class="font-montserrat font-bold text-xs text-left"> SERVICE & MAINTENANCE</h3>
+        <p class="text-xs text-left font-montserrat mt-2">Our service department
+        maintain your car to stay safe
+        on the road for many more
+        years.</p>
+      </div>
+      </div>
+
+    </div>
+
+    <div class="bg-cover w-full" :style="`background-image: url(${require('@/assets/reviewbg.png')}); min-height: 24rem;`">
+
+      <div class="p-4 flex justify-center">
+        <img class="mt-8 w-20 h-20 rounded-full border-4 border-white" src="../assets/samplecustomer.png">
+
+      </div>
+      <h3 class="font-normal font-montserrat text-white">LESLIE ALEXANDER</h3>
+      <h3 class="font-normal font-montserrat text-gray-400 text-sm">Customer</h3>
+
+      <p class="text-white font-montserrat w-1/2 mx-auto mt-6">“Awesome theme and customer service is beyond helpful! They are
+      very patient and supportive to walk you through everything.”</p>
+
+      <h1 class="font-bold text-blue-600 text-9xl font-montserrat">"</h1>
+
+
+    </div>
+
+    <div class="bg-white " style="min-height: 30rem;">
+      <div class="bg-cover
+       mx-auto" :style="`background-image: url(${require('@/assets/bg5.png')}); width: 60rem; min-height: 35rem;`">
+      </div> 
+    
+    </div>
+
+    <div class="p-4 mx-auto font-montserrat" style="background-color: #F2F2F2; min-height: 20rem;">
+      <div class="flex flex-row items-center justify-center mt-6">
+        <h1 class="font-bold text-4xl text-black">WELCOME TO</h1>
+        <h1 class="font-bold text-4xl " style="color: #FFB128">&nbsp;TARA</h1>
+      </div>
+
+      <p class="text-md font-montserrat font-normal mt-8 w-1/2 mx-auto">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+      <img class="mx-auto mt-4" src="../assets/icons/play.png">
+    
+    
     </div>
   </div>
 

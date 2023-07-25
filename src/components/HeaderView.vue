@@ -1,7 +1,7 @@
 <template>
      <div id="app">
     <nav class="topheader sticky top-0 left-0 right-0 font-montserrat">
-        <div class="flex flex-row justify-center items-center text-gray-300 text-sm p-2 space-x-6">
+        <div class="flex flex-row justify-center items-center text-gray-300 text-sm p-1 space-x-6">
           <a href="/">
             <div><img src="../assets/taralogo.png" class="rounded-full w-8 h-8"></div></a>
             <a href="/" class="mr-4 pr-4 hover:text-yellow-400">TARA</a>
@@ -30,9 +30,11 @@
     <a href="#">
       <i class="fa-brands fa-google-plus text-white hover:text-red-500"></i>
     </a>
+    <router-link to="/Auth/OwnerRegister" class=" border-b-2 border-transparent p-1 hover:border-yellow-500">
     <div>
-      <div class="font-normal text-xs">BE A HOST <i class="fa-solid fa-car" style="color: #ffffff;"></i></div>
+      <div class="font-normal text-xs">BECOME A HOST <i class="fa-solid fa-car" style="color: #ffffff;"></i></div>
     </div>
+  </router-link>
     <router-link to="/Auth/LoginPage" class="font-normal text-xs hover:text-yellow-400">
   <div>
     Login

@@ -41,7 +41,7 @@
                    </select>
 
                    <input id="date" name="date" type="date" class="p-2 border-0 outline-none text-sm py-2" style="background-color: #ECEFF3;" placeholder="Date and Time">
-                   <button type="button" class="border-2 border-yellow-500 rounded-sm px-8 text-white text-xs font-montserrat"> Search</button>
+                   <button type="button" class="border-2 border-yellow-500 rounded-sm px-8 text-white text-xs font-montserrat hover:bg-yellow-500"> Search</button>
 
                    
       </div>

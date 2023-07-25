@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-    <div class="flex flex-col mx-auto py-12 sm:px-6 lg:px-8" style="min-height: 90vh;">
+    <div class="flex flex-col mx-auto py-12 sm:px-6 lg:px-8" style="min-height: 100vh;">
         <div class=" p-2 sm:mx-auto sm:w-full sm:max-w-md">
             <div class="flex flex-row font-montserrat">
                 <div><h2 class="text-center text-3xl font-bold text-gray-900">REGISTER AS&nbsp;    </h2></div>
@@ -211,40 +211,38 @@
             </div>
 
             <div>
+      <div class="text-left">
+        <label for="drivers_license_img1" class="text-xs text-gray-600">Upload Driver's License Front View<br></label>
+        <input
+          class="text-xs"
+          type="file"
+          name="drivers_license_img1"
 
-                <div class="text-left">
-                  <label for="drivers_license_img1" class="text-xs text-gray-600 ">Upload Driver's License Front View<br></label>
-                
-                  <input
-                    class="text-xs"
-                    type="file"
-                    name="drivers_license_img1"
-                    accept="image/*"
-                    style="background-color: #ECEFF3; width: 14rem;"
-                  
-                    ref="driversLicenseImg1Input"
-                    required>
-                    
-               </div>
+          style="background-color: #ECEFF3; width: 14rem;"
+          @change="handleDriversLicenseImg1Change($event)"
+          ref="driversLicenseImg1Input"
+          :required="show2"
+        />
 
-            </div>
+      </div>
+    </div>
 
-            <div>
-                <div class="text-left">
-                  <label for="drivers_license_img2" class="text-xs text-gray-600 ">Upload Driver's License Back View<br></label>
-               
-                    <input
-                    class="text-xs"
-                    type="file"
-                    name="drivers_license_img2"
-                    accept="image/*"
-                    style="background-color: #ECEFF3; width: 14rem;"
-                    
-                    ref="driversLicenseImg2Input"
-                    required>
-                  
-               </div>
-            </div>
+    <div>
+      <div class="text-left">
+        <label for="drivers_license_img2" class="text-xs text-gray-600">Upload Driver's License Back View<br></label>
+        <input
+          class="text-xs"
+          type="file"
+          name="drivers_license_img2"
+
+          style="background-color: #ECEFF3; width: 14rem;"
+          @change="handleDriversLicenseImg2Change($event)"
+          ref="driversLicenseImg2Input"
+          :required="show2"
+        />
+
+      </div>
+    </div>
          </div>
 
          <!-- second row -->
@@ -269,82 +267,41 @@
 
             </div>
 
-            <div> 
-                <div class="text-left">
-                    <label for="supporting_id_img" class="text-xs text-gray-600 mb-2">Supporting ID front view<br></label>
-                    <input
-                    class="text-xs mt-2"
-                    type="file"
-                    name="supporting_id_img1"
-                    accept="image/*"
-                    style="background-color: #ECEFF3; width: 14rem;"
-                   
-                    ref="supportingIDImg1Input"
-                    required>
-                </div>
-                </div>
-                <div> 
-                <div class="text-left">
-                    <label for="supporting_id_img2" class="text-xs text-gray-600 mb-2">Supporting ID back view<br></label>
-                    <input
-                    class="text-xs mt-2"
-                    type="file"
-                    name="supporting_id_img"
-                    accept="image/*"
-                    style="background-color: #ECEFF3; width: 14rem;"
-                    
-                    ref="supportingIDImg2Input"
-                    required>
-                </div>
-                </div>
+            <div>
+      <div class="text-left">
+        <label for="supporting_id_img1" class="text-xs text-gray-600 mb-2">Supporting ID front view<br></label>
+        <input
+          class="text-xs mt-2"
+          type="file"
+          name="supporting_id_img1"
+
+          style="background-color: #ECEFF3; width: 14rem;"
+          @change="handleSupportingIDImg1Change($event)"
+          ref="supportingIDImg1Input"
+          :required="show2"
+        />
+
+      </div>
+    </div>
+    <div>
+      <div class="text-left">
+        <label for="supporting_id_img2" class="text-xs text-gray-600 mb-2">Supporting ID back view<br></label>
+        <input
+          class="text-xs mt-2"
+          type="file"
+          name="supporting_id_img2"
+          style="background-color: #ECEFF3; width: 14rem;"
+          @change="handleSupportingIDImg2Change($event)"
+          ref="supportingIDImg2Input"
+          :required="show2"
+        />
+
+      </div>
+    </div>
 
         </div>
 
-        <!-- third row -->
-        <div class="flex flex-row space-x-8 justify-center items-center mb-4">
-            <div> 
-                <div class="text-left">
-                  <label for="contactperson1" class="text-xs text-gray-600 ">Contact Person 1<br></label>
-                  <input v-model="contactPerson1" ref="contactPerson1Input" id="contactperson1" name="contactperson1" type="text" class="p-2 outline-none text-sm px-6 py-2" style="background-color: #ECEFF3; border-color: #ECEFF3;" required>
-               </div>
 
-
-            </div>
-
-            <div> 
-                <div class="text-left">
-                  <label for="contactperson1_number" class="text-xs text-gray-600 ">Contact Person 1 Phone No.<br></label>
-                  <input v-model="contactPerson1Number" ref="contactPerson1NumberInput" id="contactperson1_number" name="contactperson1_number" type="number" class="p-2  outline-none text-sm px-6 py-2" style="background-color: #ECEFF3; border-color: #ECEFF3;" required>
-               </div>
-
-
-            </div>
-
-
-        </div>
-
-        <div class="flex flex-row space-x-8 justify-center items-center mb-4">
-            <div> 
-                <div class="text-left">
-                  <label for="contactperson2" class="text-xs text-gray-600 ">Contact Person 2<br></label>
-                  <input v-model="contactPerson2" ref="contactPerson2Input" id="contactperson2" name="contactperson1" type="text" class="p-2  outline-none text-sm px-6 py-2" style="background-color: #ECEFF3; border-color: #ECEFF3;" required>
-               </div>
-
-
-            </div>
-
-            <div> 
-                <div class="text-left">
-                  <label for="contactperson2_number" class="text-xs text-gray-600 ">Contact Person 2 Phone No.<br></label>
-                  <input v-model="contactPerson2Number" ref="contactPerson2NumberInput" id="contactperson2_number" name="contactperson2_number" type="number" class="p-2  outline-none text-sm px-6 py-2" style="background-color: #ECEFF3; border-color: #ECEFF3;" required>
-               </div>
-
-
-            </div>
-
-
-
-        </div>
   
         
     </div>
@@ -400,12 +357,12 @@
 
 
          </div>
-         <div class="flex flex-row justify-center space-x-8">
+         <!-- <div class="flex flex-row justify-center space-x-8">
             <button type="button" @click="showPrev" class="mt-4 text-white text-xs font-montserrat block  px-10 py-2 rounded-sm" style="background-color: #FFB128;"> PREVIOUS</button>
             <button type="submit"  class="mt-4 text-white text-xs font-montserrat block px-10 py-2 rounded-sm" style="background-color: #4971FE;"> SIGN UP</button>
         
            
-        </div>
+        </div> -->
 
 
            </div>
@@ -471,20 +428,20 @@ export default {
       province: '',
       zipcode: '',
       driversLicense: '',
-      driversLicenseImg1: '',
-      driversLicenseImg2: '',
       supportingID: '',
       supportingIDNumber: '',
-      supportingIDImg1: '',
-      supportingIDImg2: '',
-      contactPerson1: '',
-      contactPerson1Number: '639',
-      contactPerson2: '',
-      contactPerson2Number: '639',
+      isNextClicked: false,
+      supportingIDImg1File: null,
+      supportingIDImg2File: null,
+      driversLicenseImg1File: null,
+      driversLicenseImg2File: null,
+      tempSupportingIDImg1File: null,
+      tempSupportingIDImg2File: null,
+      tempDriversLicenseImg1File: null,
+      tempDriversLicenseImg2File: null,
     };
   },
   computed: {
-
 
     isPhoneNumberInvalid() {
       const phoneNumberLength = this.phoneNumber.toString().length;
@@ -512,30 +469,16 @@ export default {
       );
     },
     isShow2FormValid() {
+      const hasDriversLicenseFiles =
+      this.driversLicenseImg1File !== null && this.driversLicenseImg2File !== null;
+      const hasSupportingIDFiles =
+      this.supportingIDImg1File !== null && this.supportingIDImg2File !== null;
       return (
         this.driversLicense.trim() !== '' &&
-        this.driversLicenseImg1.trim() !== '' &&
-        this.driversLicenseImg2.trim() !== '' &&
         this.supportingID.trim() !== '' &&
         this.supportingIDNumber.trim() !== '' &&
-        this.supportingIDImg1.trim() !== '' &&
-        this.supportingIDImg2.trim() !== '' &&
-        this.validateImageFileSize(this.driversLicenseImg1, 2) &&
-        this.validateImageFileSize(this.driversLicenseImg2, 2) &&
-        this.validateImageFileSize(this.supportingIDImg1, 2) &&
-        this.validateImageFileSize(this.supportingIDImg2, 2) &&
-        this.validateImageFileType(this.driversLicenseImg1) &&
-        this.validateImageFileType(this.driversLicenseImg2) &&
-        this.validateImageFileType(this.supportingIDImg1) &&
-        this.validateImageFileType(this.supportingIDImg2) &&
-        this.contactPerson1.trim() !== '' &&
-        this.contactPerson1Number !== '' &&
-        this.contactPerson1Number.length === 12 &&
-        this.contactPerson2.trim() !== '' &&
-        this.contactPerson2Number !== '' &&
-        this.contactPerson2Number.length === 12
-
-
+        hasDriversLicenseFiles &&
+        hasSupportingIDFiles
       );
     },
     isFormValid() {
@@ -543,67 +486,99 @@ export default {
     },
   },
   methods: {
-
+    handleSupportingIDImg1Change(event) {
+      this.supportingIDImg1File = event.target.files[0];
+    },
+    handleSupportingIDImg2Change(event) {
+      this.supportingIDImg2File = event.target.files[0];
+    },
+    handleDriversLicenseImg1Change(event) {
+      this.driversLicenseImg1File = event.target.files[0];
+    },
+    handleDriversLicenseImg2Change(event) {
+      this.driversLicenseImg2File = event.target.files[0];
+    },
 
     showNext() {
+      this.isNextClicked = true;
       const currentStep = this.getCurrentStep();
       let isValid = true;
 
       if (currentStep === 1) {
-    isValid = this.isShow1FormValid;
-    if (!isValid) {
-     
-      if (this.firstName.trim() === '') {
+        isValid = this.isShow1FormValid;
+        if (!isValid) {
+          // Validation code
+          if (this.firstName.trim() === '') {
         this.$nextTick(() => {
           this.$refs.firstNameInput.classList.add('border-red-600');
         });
-      } 
+      } else {
+        this.$refs.firstNameInput.classList.remove('border-red-600');
+      }
       if (this.lastName.trim() === '') {
         this.$nextTick(() => {
           this.$refs.lastNameInput.classList.add('border-red-600');
         });
+      } else {
+        this.$refs.lastNameInput.classList.remove('border-red-600');
       }
       if (this.gender.trim() === '') {
         this.$nextTick(() => {
           this.$refs.genderInput.classList.add('border-red-600');
         });
+      } else {
+        this.$refs.genderInput.classList.remove('border-red-600');
       }
       if (this.birthday.trim() === '') {
         this.$nextTick(() => {
           this.$refs.birthdayInput.classList.add('border-red-600');
         });
+      } else {
+        this.$refs.birthdayInput.classList.remove('border-red-600');
       }
       if (!this.isEighteenYearsOld(this.birthday.trim())) {
         alert("You must be 18 years old or above to register.");
         this.$nextTick(() => {
           this.$refs.birthdayInput.classList.add('border-red-600');
         });
+      } else {
+        this.$refs.birthdayInput.classList.remove('border-red-600');
       }
 
       if (this.subdivision.trim() === '') {
         this.$nextTick(() => {
           this.$refs.subdivisionInput.classList.add('border-red-600');
         });
+      } else {
+        this.$refs.subdivisionInput.classList.remove('border-red-600');
       }
       if (this.city.trim() === '') {
         this.$nextTick(() => {
           this.$refs.cityInput.classList.add('border-red-600');
         });
+      } else {
+        this.$refs.cityInput.classList.remove('border-red-600');
       }
       if (this.province.trim() === '') {
         this.$nextTick(() => {
           this.$refs.provinceInput.classList.add('border-red-600');
         });
+      } else {
+        this.$refs.provinceInput.classList.remove('border-red-600');
       }
       if (this.houseNo === '' || isNaN(Number(this.houseNo)) || Number(this.houseNo) < 0) {
         this.$nextTick(() => {
           this.$refs.houseNoInput.classList.add('border-red-600');
         });
+      } else {
+        this.$refs.houseNoInput.classList.remove('border-red-600');
       }
       if (this.houseNo < 0) {
       this.$nextTick(() => {
         this.$refs.houseNoInput.classList.add('border-red-600');
       });
+    } else {
+      this.$refs.houseNoInput.classList.remove('border-red-600');
     }
 
 
@@ -611,62 +586,65 @@ export default {
         this.$nextTick(() => {
           this.$refs.zipcodeInput.classList.add('border-red-600');
         });
+      } else {
+        this.$refs.zipcodeInput.classList.remove('border-red-600');
       }
       if (this.phoneNumber.length !== 12) {
         this.$nextTick(() => {
           this.$refs.phoneNumberInput.classList.add('border-red-600');
         });
+      } else {
+        this.$refs.phoneNumberInput.classList.remove('border-red-600');
       }
      
     }
-  }
-      else if (currentStep === 2) {
+        
+      } else if (currentStep === 2) {
         isValid = this.isShow2FormValid;
+           
+          const driversLicenseImg1Input = this.$refs.driversLicenseImg1Input;
+          const driversLicenseImg2Input = this.$refs.driversLicenseImg2Input;
+          const supportingIDImg1Input = this.$refs.supportingIDImg1Input;
+          const supportingIDImg2Input = this.$refs.supportingIDImg2Input;
+
+          // Update the temporary properties with the selected files
+          this.tempDriversLicenseImg1File = driversLicenseImg1Input.files[0];
+          this.tempDriversLicenseImg2File = driversLicenseImg2Input.files[0];
+          this.tempSupportingIDImg1File = supportingIDImg1Input.files[0];
+          this.tempSupportingIDImg2File = supportingIDImg2Input.files[0];
+     
 
         if (!isValid) {
+          // Validation code
           if (this.driversLicense.trim() === '') {
           this.$nextTick(() => {
             this.$refs.driversLicenseInput.classList.add('border-red-600');
           });
+        } else {
+          this.$refs.driversLicenseInput.classList.remove('border-red-600');
         }
         if (this.supportingID.trim() === '') {
           this.$nextTick(() => {
             this.$refs.supportingIDInput.classList.add('border-red-600');
           });
+        } else {
+          this.$refs.supportingIDInput.classList.remove('border-red-600');
         }
         if (this.supportingIDNumber.trim() === '') {
           this.$nextTick(() => {
             this.$refs.supportingIDNumberInput.classList.add('border-red-600');
           });
-        } 
-        if (this.contactPerson1.trim() === '') {
-          this.$nextTick(() => {
-            this.$refs.contactPerson1Input.classList.add('border-red-600');
-          });
-        } 
-      
-        if (this.contactPerson2.trim() === '') {
-          this.$nextTick(() => {
-            this.$refs.contactPerson2Input.classList.add('border-red-600');
-          });
-        } 
-      //   if (this.contactPerson1Number === '') {
-      //   this.$nextTick(() => {
-      //     this.$refs.contactPerson1NumberInput.classList.add('border-red-600');
-      //   });
-      // }
-      //   if (this.contactPerson2Number === '') {
-      //   this.$nextTick(() => {
-      //     this.$refs.contactPerson2NumberInput.classList.add('border-red-600');
-      //   });
-      // }
-
+        } else {
+          this.$refs.supportingIDNumberInput.classList.remove('border-red-600');
+        }
 
         }
-   
+
+
       }
 
       if (isValid) {
+
         if (this.show1) {
           this.show1 = false;
           this.show2 = true;
@@ -675,12 +653,31 @@ export default {
           this.show3 = true;
         }
       }
+
     },
     showPrev() {
       if (this.show2) {
+        // Store the selected files temporarily
+        this.tempDriversLicenseImg1File = this.$refs.driversLicenseImg1Input.files[0];
+        this.tempDriversLicenseImg2File = this.$refs.driversLicenseImg2Input.files[0];
+        this.tempSupportingIDImg1File = this.$refs.supportingIDImg1Input.files[0];
+        this.tempSupportingIDImg2File = this.$refs.supportingIDImg2Input.files[0];
+
         this.show2 = false;
         this.show1 = true;
       } else if (this.show3) {
+        // Assign the temporary files back to the original file properties
+        this.driversLicenseImg1File = this.tempDriversLicenseImg1File;
+        this.driversLicenseImg2File = this.tempDriversLicenseImg2File;
+        this.supportingIDImg1File = this.tempSupportingIDImg1File;
+        this.supportingIDImg2File = this.tempSupportingIDImg2File;
+
+        this.tempDriversLicenseImg1File = null;
+        this.tempDriversLicenseImg2File = null;
+        this.tempSupportingIDImg1File = null;
+        this.tempSupportingIDImg2File = null;
+
+
         this.show3 = false;
         this.show2 = true;
       }
@@ -715,20 +712,7 @@ export default {
       }
       return age >= 18;
     },
-    validateImageFileSize(file, maxSizeInMB) {
-      if (file && file.size) {
-        const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
-        return file.size <= maxSizeInBytes;
-      }
-      return false;
-    },
-    validateImageFileType(file) {
-      if (file && file.type) {
-        const validFileTypes = ['image/jpeg', 'image/png'];
-        return validFileTypes.includes(file.type);
-      }
-      return false;
-    },
+
   },
 };
 </script>

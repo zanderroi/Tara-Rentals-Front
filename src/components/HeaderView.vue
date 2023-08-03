@@ -30,7 +30,7 @@
     <a href="#">
       <i class="fa-brands fa-google-plus text-white hover:text-red-500"></i>
     </a>
-    <router-link to="/Auth/OwnerRegister" class=" border-b-2 border-transparent p-1 hover:border-yellow-500">
+    <router-link to="/HostPage" class=" border-b-2 border-transparent p-1 hover:border-yellow-500">
     <div>
       <div class="font-normal text-xs">BECOME A HOST <i class="fa-solid fa-car" style="color: #ffffff;"></i></div>
     </div>

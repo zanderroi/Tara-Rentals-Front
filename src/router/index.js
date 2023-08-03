@@ -7,6 +7,7 @@ import CustomerRegister from "@/views/Auth/CustomerRegister.vue";
 import OwnerRegister from "@/views/Auth/OwnerRegister.vue";
 import TruckerRegister from "@/views/Auth/TruckerRegister.vue";
 import UserLogin from "@/views/Auth/LoginPage.vue";
+import HostPage from "../views/HostPage.vue";
 
 const routes = [
   {
@@ -44,6 +45,11 @@ const routes = [
     path:"/Auth/TruckerRegister",
     name:"TruckerRegister",
     component: TruckerRegister,
+  },
+  {
+    path:"/HostPage",
+    name:"HostPage",
+    component: HostPage,
   }
 ];
 

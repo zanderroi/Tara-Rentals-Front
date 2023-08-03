@@ -19,7 +19,7 @@
                 <div class="font-normal text-sm p-1">About Us</div>
               
             </router-link>
-              <router-link to="/Auth/OwnerRegister" class=" border-b-2 border-transparent p-1  hover:border-yellow-500">
+              <router-link to="/HostPage" class=" border-b-2 border-transparent p-1  hover:border-yellow-500">
               
                 <div class="font-normal text-sm p-1">BECOME A HOST <i class="fa-solid fa-car" style="color: #ffffff;"></i></div>
               
@@ -52,7 +52,7 @@
                     <img src="../assets/taralogo.png" class="rounded-full w-8 h-8" />
                   </a>
 
-                  <router-link to="/Auth/OwnerRegister" class=" border-b-2 border-transparent p-1 hover:border-yellow-500">
+                  <router-link to="/HostPage" class=" border-b-2 border-transparent p-1 hover:border-yellow-500">
               <div>
                 <div class="font-normal text-xs text-white">BECOME A HOST <i class="fa-solid fa-car" style="color: #ffffff;"></i></div>
               </div>

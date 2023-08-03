@@ -9,6 +9,8 @@ import TruckerRegister from "@/views/Auth/TruckerRegister.vue";
 import UserLogin from "@/views/Auth/LoginPage.vue";
 import HostPage from "../views/HostPage.vue";
 
+import OurServices from "../views/OurServices.vue";
+import AboutUs from "../views/AboutUs.vue";
 const routes = [
   {
     path: "/",
@@ -50,7 +52,18 @@ const routes = [
     path:"/HostPage",
     name:"HostPage",
     component: HostPage,
-  }
+  },
+
+  {
+    path:"/OurServices",
+    name:"OurServices",
+    component: OurServices,
+  },
+  {
+    path:"/AboutUs",
+    name:"AboutUs",
+    component: AboutUs,
+  },
 ];
 
 const router = createRouter({

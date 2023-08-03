@@ -93,16 +93,16 @@
       </div>
     </div>
   </div>
-  <div class="border-2 border-black w-full flex flex-wrap justify-center items-center space-x-20" style="min-height: 15rem;">
-      <div class="border-2 border-black w-96">
+  <div class="w-full flex flex-wrap justify-center items-center space-x-20" >
+      <div class="w-96" style="min-height: 12rem;">
         <div class="p-4 my-1">
-          <h3 class="font-montserrat font-bold text-xl text-left">Insurance included</h3>
+          <h3 class="font-montserrat font-bold text-xl text-left">Insurance included </h3>
             <p class="text-sm text-left font-montserrat mt-2">Rest easy knowing you’re covered with xxx,xxx in liability
                                                                insurance from *, plus you choose from an array of protection
                                                                 plans that include varying levels of reimbursement for physical damage. </p>
     </div>
   </div>
-    <div class="border-2 border-black my-2 w-96">
+    <div class="my-2 w-96" style="min-height: 12rem;">
       <div class="p-4 mt-1">
          <h3 class="font-montserrat font-bold text-xl text-left"> Safety & support</h3>
             <p class="text-sm text-left font-montserrat mt-2">Get access to 24/7 customer support, roadside assistance for your guests, 
@@ -112,6 +112,34 @@
     </div>
   </div>
 </div>
+
+<div class="w-full flex flex-wrap justify-center items-center space-x-20" >
+      <div class="w-96" style="min-height: 12rem;">
+        <div class="p-4 my-1">
+          <h3 class="font-montserrat font-bold text-xl text-left">Demand generation</h3>
+            <p class="text-sm text-left font-montserrat mt-2">Get instant access to a prescreened customer base of over 14 million worldwide, 
+                                                              plus marketing and advertising support for your cars, funded by Turo, 
+                                                              the world’s leading car sharing marketplace.</p>
+    </div>
+  </div>
+    <div class="my-2 w-96" style="min-height: 12rem;">
+      <div class="p-4 mt-1">
+         <h3 class="font-montserrat font-bold text-xl text-left"> An easy-to-use app</h3>
+            <p class="text-sm text-left font-montserrat mt-2">Manage your business and your bookings seamlessly on the go — accept trips, 
+                                                              tweak your pricing, message your guests, and more, all from your phone.</p>
+    </div>
+  </div>
+</div>
+<div class="w-full flex felx-wrap justify-center items-center" style="min-height: 15rem;">
+    <div class="my-2">
+        <div class="p-4 my-2 mt-2">
+          <h3 class="font-montserrat text-4xl text-center font-bold">Start building your business <br> plan.</h3>
+          <p class="font-montserrat text-base text-center font-medium mt-3">List your first car to get started today and build 
+                                                                            your plan to take control <br>of your financial future tomorrow.</p>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-5 mt-8">Get Started</button> 
+      </div>
+    </div>
+  </div>
 </template>
   
 <style>

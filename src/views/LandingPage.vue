@@ -48,17 +48,19 @@
  
     </div>
   </div>
-  <div class="mt-6 p-6 bg-white" :style="`min-height: 100vh;`">
+  <div class="mt-6 p-6 " :style="`min-height: 100vh;`">
   <div class="pt-4 flex flex-row justify-center space-x-5">
     <div>
-      <h1 class="font-montserrat text-gray-800 font-bold text-4xl">RECENT</h1>
+      <h1 class=" text-gray-800 font-bold text-5xl">RECENT</h1>
     </div>
     <div>
-      <h1 class="font-montserrat font-bold text-4xl" style="color: #FFB128;">CARS AVAILABLE</h1>
+      <h1 class="font-bold text-5xl" style="color: #FFB128;">CARS AVAILABLE</h1>
     </div>
   </div>
-  <p class="mt-4 text-center text-md font-normal mb-10">Select the one that suits your preference</p>
-  <div class="flex flex-wrap justify-center items-center space-x-5 space-y-4 px-8">
+  <p>
+    <span class="highlighted-text text-2xl mt-4 font-semibold">Select the one that suits your preference</span>
+  </p>
+  <div class="p-4 flex flex-wrap justify-center items-center space-x-5 space-y-4 px-8">
     <div class="w-64 h-72 mt-4" style="background-color: #373C3F;">
           <div class="h-48 bg-cover border-b-4" :style="`background-image: url(${require('@/assets/carsimage/toyota3.jpg')}); border-color: #4971F1;`"></div>
         </div>
@@ -174,7 +176,7 @@
     
     </div>
 
-    <div class="p-4 mx-auto font-montserrat" style="background-color: #F2F2F2; min-height: 20rem;">
+    <div class="p-4 mx-auto" style="background-color: #F2F2F2; min-height: 20rem;">
       <div class="flex flex-row items-center justify-center mt-6">
         <h1 class="font-bold text-4xl text-black">WELCOME TO</h1>
         <h1 class="font-bold text-4xl " style="color: #FFB128">&nbsp;TARA</h1>
@@ -185,17 +187,150 @@
     
     
     </div>
+
+    <div class="mt-4 p-4" >
+
+      <h1 class="text-5xl highlighted-text mt-4 mb-4"> Frequently Asked Questions</h1>
+
+      <div class="flex flex-row justify-center p-6 mt-4 space-x-12">
+
+        <div class=" text-left" style="width: 40%;"> 
+          <div class="faq-section">
+    <div v-for="(item, index) in faqs" :key="index">
+        <div
+          class="question flex justify-between items-center cursor-pointer p-4 border-t-2 border-gray-100"
+          @click="toggleAnswer(index, 'faqs' , $event)">
+          <span class="text-md font-semibold">{{ item.question }}</span>
+          <i :class="['fa', isOpen.faqs === index ? 'fa-chevron-up' : 'fa-chevron-down', 'text-lg']"></i>
+        </div>
+        <div class="answer p-4" :class="{ 'hidden': isOpen.faqs !== index, 'block': isOpen.faqs === index }">
+          <p>{{ item.answer }}</p>
+        </div>
+    </div>
+  </div>
+
+        </div>
+
+        <div class=" text-left" style="width: 40%;"> 
+          <div class="faq-section">
+    <div v-for="(item, index) in faqs2" :key="index">
+        <div
+          class="question flex justify-between items-center cursor-pointer p-4 border-t-2 border-gray-100"
+          @click="toggleAnswer(index, 'faqs2', $event)">
+          <span class="text-md font-semibold">{{ item.question }}</span>
+          <i :class="['fa', isOpen.faqs2 === index ? 'fa-chevron-up' : 'fa-chevron-down', 'text-lg']"></i>
+        </div>
+        <div class="answer p-4" :class="{ 'hidden': isOpen.faqs2 !== index, 'block': isOpen.faqs2 === index }">
+          <p>{{ item.answer }}</p>
+        </div>
+    </div>
+  </div>
+
+        </div>
+      
+      </div>
+    </div>
+
   </div>
 
   </template>
   <script>
+    export default {
+  data() {
+    return {
+      faqs: [
+        {
+          question: 'What do I need to book a car on Tara? ',
+          answer: 'To book a car on Tara, you must create a Tara account, be 18 years old or older in the Philippines, have a valid driver’s license, and get approved to drive on Turo. When you’re booking your first trip, you’ll go through a quick approval process by entering your driver’s license and some other information. In most cases, you’ll get approved immediately, and you’ll be set for all future road trips, day trips, and business trips!',
+        },
+        {
+          question: 'Do I need my own insurance?',
+          answer: 'No, you don’t need personal insurance coverage to book a car on Tara.',
+        },
+        {
+          question: 'Can other people drive a car that I booked?',
+          answer: 'No, only the registered user can drive the car',
+        },
+        {
+          question: 'What is the cancellation policy on Tara?',
+          answer: 'You can cancel and get a full refund up to 24 hours before your trip starts. If you book a trip with less than 24 hours’ notice, you have one hour after booking to cancel free of charge. If you cancel after the free cancellation period ends, you will be charged a small cancellation fee.r',
+        },
+        
+        // Add more FAQ items here
+      ],
 
+      faqs2: [
+        {
+          question: 'What happens if I have an accident?',
+          answer: 'If there’s an emergency or an issue with the car, call our emergency roadside assistance provider, available 24/7. We’ll make sure you’re safe, then help you get back on your way.',
+        },
+        {
+          question: 'Can I get my car delivered to me?',
+          answer: 'No, you can only get your booked car in the location provided',
+        },
+        {
+          question: 'What are the cleaning and safety policies on Tara?',
+          answer: 'Under the enhanced cleaning policy, hosts are required to clean and disinfect their vehicles thoroughly before every trip, so you can feel safe and comfortable behind the wheel. Turo hosts have access to training materials on enhanced safety measures and cleaning practices to help prevent the spread of COVID-19 or other viruses.',
+        },
+
+        
+        // Add more FAQ items here
+      ],
+      isOpen: {
+        faqs: null,
+        faqs2: null,
+      },
+    };
+  },
+  methods: {
+    toggleAnswer(index, section, event) {
+      if (this.isOpen[section]=== index) {
+        this.isOpen[section] = null; // Close the answer if clicked again
+      } else {
+        this.isOpen[section] = index; // Open the clicked answer
+      }
+      event.stopPropagation();
+    },
+  },
+};
   </script>
-  
+
   <style scoped>
   
-  .font-montserrat {
-    font-family: 'Montserrat', sans-serif;
+  /* .font-montserrat {
+    font-family:  'Montserrat', sans-serif;
+  } */
+
+  h1 {
+    font-family: Darker Grotesque;
+    font-weight: bolder;
   }
+
+  p {
+    font-family: Montserrat;
+
+  }
+
+  span {
+    font-family: Montserrat;
+  }
+
+  .highlighted-text {
+  position: relative;
+  display: inline-block;
+}
+
+.highlighted-text::before {
+  content: "";
+  position: absolute;
+  top: 60%; /* Adjust this value to control the vertical position of the highlight */
+  left: 0;
+  width: 100%; /* Adjust this value to control the width of the highlight */
+  height: .7em;
+  background-color: rgb(255, 198, 42, .4); /* Change the background color here */
+  z-index: -1;
+}
+
+
   </style>
   

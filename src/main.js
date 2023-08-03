@@ -5,4 +5,5 @@ import "./styles.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import 'typeface-montserrat';
 
+
 createApp(App).use(router).mount("#app");

@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="p-4 font-montserrat" style="background-color: #232628;">
-        <div class="flex flex-row justify-center items-center p-4 space-x-9">
+        <div class="flex flex-wrap justify-center items-center p-4 space-x-9">
             <div class="w-64  border-b border-gray-700 p-2" style="min-height: 10rem;">
                 <h3 class="text-blue-600 font-semibold text-xs text-left mb-2">TARA ABOUT</h3>
                 <p class="text-gray-400 text-xs text-left">Fusce interdum ipsum egestas urna amet
@@ -35,7 +35,7 @@
 
         </div>
 
-        <div class="flex flex-row justify-center items-center  px-4 space-x-9">
+        <div class="flex flex-wrap justify-center items-center  px-4 space-x-9">
 
             <div class="p-2 w-64 " style="min-height: 5rem;">
                 <h3 class="text-white font-semibold text-xs mb-2 text-left">SUBSCRIBE </h3>

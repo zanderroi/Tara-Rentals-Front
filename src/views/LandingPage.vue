@@ -3,14 +3,14 @@
     <div class="bg-cover bg-no-repeat w-full flex flex-col pt-4" :style="`background-image: url(${require('@/assets/bgimagehome.jpg')}); min-height: 95vh;`">
     <!-- Your content here --> 
 
-    <div class="mt-4 w-1/2  mx-auto p-4 rounded-md" style="background-color: #232628; height: 9rem;">
-      <div class="flex flex-row p-4">
+    <div class="mt-4  mx-auto p-4 rounded-md" style="background-color: #232628; ">
+      <div class="flex flex-wrap p-4">
         <img src="../assets/searchcaricon.png">
       <h3 class="ml-4 font-montserrat text-md text-white text-left">Looking for a Car to Rent</h3>
     
       </div>
-      <div class="flex flex-row space-x-4 px-4 pt-2 font-montserrat"> 
-        <select id="year" name="year" class="p-2 border-0 outline-none text-xs py-2 w-32" style="background-color: #ECEFF3;">
+      <div class="flex flex-wrap space-x-4 px-4 pt-2 font-montserrat"> 
+        <select id="year" name="year" class="p-2 border-0 outline-none text-xs py-2 " style="background-color: #ECEFF3;">
                        <option value=""> Choose Year </option>
                        <option value="2023">2023</option>
                        <option value="2022">2022</option>
@@ -48,8 +48,8 @@
  
     </div>
   </div>
-  <div class="mt-6 p-6 " :style="`min-height: 100vh;`">
-  <div class="pt-4 flex flex-row justify-center space-x-5">
+  <div class=" p-6 bg-white " :style="`min-height: 100vh;`">
+  <div class="pt-4 flex flex-wrap justify-center space-x-5">
     <div>
       <h1 class=" text-gray-800 font-bold text-5xl">RECENT</h1>
     </div>
@@ -87,15 +87,15 @@
  
       
 
-    <div class="bg-cover w-full" :style="`background-image: url(${require('@/assets/bg3.png')}); min-height: 24rem;`">
-  <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-32 pt-10 sm:flex">
-    <div class="bg-white w-full sm:w-96 h-64 p-6 rounded-sm shadow-sm">
+    <div class="bg-cover w-full p-20" :style="`background-image: url(${require('@/assets/bg3.png')});`">
+  <div class="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-32 sm:flex">
+    <div class="bg-white p-6 rounded-sm shadow-sm">
       <img class="mt-4 w-14 h-10" src="../assets/caricon.png">
       <h3 class="font-montserrat text-md font-bold text-left mt-2">LOOKING FOR A CAR TO RENT?</h3>
       <p class="text-left text-sm mt-4 font-montserrat">Our cars are delivered fully-registered with all requirements completed.</p>
       <button class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-sm text-white flex justify-start mt-4 text-xs font-montserrat">VIEW CARS</button>
     </div>
-    <div class="bg-white w-full sm:w-96 h-64 p-6 rounded-sm shadow-sm">
+    <div class="bg-white   p-6 rounded-sm shadow-sm">
       <img class="mt-4 w-14 h-10" src="../assets/caricon.png">
       <h3 class="font-montserrat text-md font-bold text-left mt-2">LOOKING FOR A TRUCKING SERVICE?</h3>
       <p class="text-left text-sm mt-4 font-montserrat">Our cars are delivered fully-registered with all requirements completed.</p>
@@ -104,12 +104,12 @@
   </div>
 </div>
 
-    <div class="w-full h-72 flex flex-row justify-center items-center space-x-6" style="background-color: #C0BDBD;">
+    <div class="w-full flex flex-wrap justify-center items-center space-x-6 space-y-2 p-4" style="background-color: #C0BDBD; min-height: 18rem;">
 
       <div class="border-2 border-white w-72 rounded-sm flex flex-row" style="min-height: 10rem;">
 
-        <div class="ml-6 mt-6 w-24">
-          <img class="mt-4 w-8 h-8" src="../assets/icons/brands.png">
+        <div class="ml-6 mt-6 w-32">
+          <img class="mt-4 w-24 h-8" src="../assets/icons/brands.png">
         </div>
         <div class="p-4 mt-6">
           <h3 class="font-montserrat font-bold text-xs text-left"> WIDE RANGE OF BRANDS</h3>
@@ -171,13 +171,13 @@
 
     <div class="bg-white " style="min-height: 30rem;">
       <div class="bg-cover
-       mx-auto" :style="`background-image: url(${require('@/assets/bg5.png')}); width: 60rem; min-height: 35rem;`">
+       mx-auto" :style="`background-image: url(${require('@/assets/bg5.png')}); background-size: cover;  width: 100%; min-height: 35rem;`">
       </div> 
     
     </div>
 
     <div class="p-4 mx-auto" style="background-color: #F2F2F2; min-height: 20rem;">
-      <div class="flex flex-row items-center justify-center mt-6">
+      <div class="flex flex-wrap items-center justify-center mt-6">
         <h1 class="font-bold text-4xl text-black">WELCOME TO</h1>
         <h1 class="font-bold text-4xl " style="color: #FFB128">&nbsp;TARA</h1>
       </div>
@@ -188,17 +188,17 @@
     
     </div>
 
-    <div class="mt-4 p-4" >
+    <div class=" p-4 bg-white" >
 
       <h1 class="text-5xl highlighted-text mt-4 mb-4"> Frequently Asked Questions</h1>
 
-      <div class="flex flex-row justify-center p-6 mt-4 space-x-12">
+      <div class="flex flex-wrap justify-center p-6 mt-4 space-x-12">
 
         <div class=" text-left" style="width: 40%;"> 
           <div class="faq-section">
     <div v-for="(item, index) in faqs" :key="index">
         <div
-          class="question flex justify-between items-center cursor-pointer p-4 border-t-2 border-gray-100"
+          class="question flex flex-wrap justify-between items-center cursor-pointer p-4 border-t-2 border-gray-100"
           @click="toggleAnswer(index, 'faqs' , $event)">
           <span class="text-md font-semibold">{{ item.question }}</span>
           <i :class="['fa', isOpen.faqs === index ? 'fa-chevron-up' : 'fa-chevron-down', 'text-lg']"></i>

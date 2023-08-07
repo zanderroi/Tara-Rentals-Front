@@ -1,4 +1,6 @@
 <template>
+ <router-link to="/ContactUs">Contact Us</router-link>
+ <div id="app">
       <div class="w-full flex felx-wrap justify-center items-center" style="min-height: 15rem;">
         <div class="p-4 mt-1">
           <p class="font-darkgrotesque font-bold text-sm uppercase text-left">Find Your Drive</p>
@@ -130,7 +132,7 @@
     </div>
   </div>
 </div>
-<div class="w-full flex felx-wrap justify-center items-center" style="min-height: 15rem;">
+<div class="w-full flex flex-wrap justify-center items-center" style="min-height: 15rem;">
     <div class="my-2">
         <div class="p-4 my-2 mt-2">
           <h3 class="font-montserrat text-4xl text-center font-bold">Start building your business <br> plan.</h3>
@@ -140,6 +142,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
   
 <style>

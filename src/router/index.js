@@ -8,6 +8,7 @@ import OwnerRegister from "@/views/Auth/OwnerRegister.vue";
 import TruckerRegister from "@/views/Auth/TruckerRegister.vue";
 import UserLogin from "@/views/Auth/LoginPage.vue";
 import HostPage from "../views/HostPage.vue";
+import ContactUs from "../views/ContactUs.vue";
 
 import OurServices from "../views/OurServices.vue";
 import AboutUs from "../views/AboutUs.vue";
@@ -63,6 +64,11 @@ const routes = [
     path:"/AboutUs",
     name:"AboutUs",
     component: AboutUs,
+  },
+  {
+    path:"/ContactUs",
+    name:"ContactUs",
+    component: ContactUs,
   },
 ];
 
